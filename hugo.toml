@@ -72,6 +72,7 @@ baseURL = 'https://bambooshi.ttmenus.com/'
     apiUrl = "https://notify.ttmenus.com/api/v1"
     websocketUrl = "wss://notify.ttmenus.com/api/v1/ws/connect"
     serviceUrl = "https://notify.ttmenus.com"
+    clientDomain = "bambooshi.ttmenus.com"
 
 [params.orderingsystem]
     # Set to false to disable placing orders (cart still works; user gets message and order is cancelled)
@@ -93,8 +94,8 @@ baseURL = 'https://bambooshi.ttmenus.com/'
     email = "anomrac21@gmail.com"
     phone = "18687351000"
     facebook = ""
-    instagram = ""
-    tiktok = ""
+    instagram = "https://www.instagram.com/bambooshi.tt"
+    tiktok = "https://www.tiktok.com/@bambooshi.tt"
 
 [privacy]
 

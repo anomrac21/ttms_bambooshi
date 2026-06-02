@@ -1,9 +1,8 @@
 ---
 title: "Bambooshi"
 image: ""
-images:
-    - image: ""
+images: []
 slideshow: []
 ---
 
-<p>TTMenus Menu System.</p>
+<p>Halal certified sushi rolls in Chaguanas. Signature rolls, sides, and weekday lunch specials.</p>
