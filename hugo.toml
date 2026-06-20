@@ -1,5 +1,8 @@
 theme = '_menus_ttms'
-languageCode = 'en-tt'
+languageCode = 'en-TT'
+title = 'Bambooshi'
+baseURL = 'https://bambooshi.ttmenus.com/'
+enableRobotsTXT = true
 
 # Mount theme's content (dashboard, locations, api, etc.); keep project content (defining mounts replaces default for that target)
 [module]
@@ -9,8 +12,6 @@ languageCode = 'en-tt'
   [[module.mounts]]
     source = "themes/_menus_ttms/content"
     target = "content"
-title = 'Bambooshi'
-baseURL = 'https://bambooshi.ttmenus.com/'
 
 [markup]
 
@@ -39,6 +40,7 @@ baseURL = 'https://bambooshi.ttmenus.com/'
   authServiceUrl = "https://auth.ttmenus.com"
   adsServiceUrl = "https://ads.ttmenus.com"
   notifyServiceUrl = "https://notify.ttmenus.com"
+  description = "Bambooshi — halal certified sushi rolls in Chaguanas. Signature rolls, sides, and weekday lunch specials. View our menu and order online."
 
 [params.ads]
     clientId = "ttms_bambooshi"
@@ -58,6 +60,13 @@ baseURL = 'https://bambooshi.ttmenus.com/'
     # apiUrl = "http://localhost:8084/api"
     # serviceUrl = "http://localhost:8084"
 
+# Thumbor — on-demand resized images for dashboard previews (see ttms-app-cluster/charts/thumbor)
+[params.thumbor]
+    enabled = true
+    url = "https://thumbor.ttmenus.com"
+    sourceBaseUrl = "https://bambooshi.ttmenus.com"
+    menuImagesUseThumbor = false
+
 # Menu Image Service - user-submitted images with admin approval
 [params.menuImageService]
     enabled = true
@@ -75,24 +84,53 @@ baseURL = 'https://bambooshi.ttmenus.com/'
     clientDomain = "bambooshi.ttmenus.com"
 
 [params.orderingsystem]
-    # Set to false to disable placing orders (cart still works; user gets message and order is cancelled)
     enabled = true
     orderingDisabledMessage = "Ordering is not available for this menu at this time."
     vat = 0
     servicecharge = 0
     hastables = true
     usephonecall = false
-    whatsapp = "18687351000"
-    phone = "18687351000"
+    whatsapp = 18687351000
+    phone = 18687351000
+
+# Payment Service — menu checkout (disabled for this client)
+[params.paymentService]
+    enabled = false
+    apiUrl = "https://pay.bambooshi.ttmenus.com"
+    clientId = "ttms_bambooshi"
+    currency = "TTD"
+    provider = "wipay"
+
+# Power-up flags surfaced in /index.json → TT Menus hub Account venue details
+[params.features]
+    payments = false
+    delivery = false
+    notifications = true
+    analytics_access = false
+    featured = false
+    exclusive_ads = false
+    no_competitor_ads = false
+    unmetered_traffic = false
+
+# POS: enabled + provider drive runtime (head.html) and hub Account (index.json features.pos / pos_provider)
+[params.posintegration]
+    enabled = false
+    provider = ""
+    api_url = ""
+    access_token = ""
+    store_id = ""
+    sync_menu = false
+    auto_process_orders = false
+    fallback_to_whatsapp = true
 
 [params.services]
-    analyticsid = "0"
+    analyticsid = 0
     notifications = true
 
 [params.social]
     youtube = ""
     email = "anomrac21@gmail.com"
-    phone = "18687351000"
+    phone = 18687351000
     facebook = ""
     instagram = "https://www.instagram.com/bambooshi.tt"
     tiktok = "https://www.tiktok.com/@bambooshi.tt"

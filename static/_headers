@@ -1,6 +1,10 @@
 # _headers file
 /*
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 # Allow all origins to access all index.json files
 /**/index.json
   Access-Control-Allow-Origin: *.ttmenus.com
@@ -12,3 +16,28 @@
   Access-Control-Allow-Origin: *.ttmenus.com
   Access-Control-Allow-Methods: GET
   Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
+
+# Promotions JSON feed for ads-client.js
+/promotions/index.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
+
+# Branding assets (hero WebGL logo chips, map pins, etc.)
+/branding/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept
+  Cache-Control: public, max-age=604800
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/main/*
+  Cache-Control: public, max-age=604800

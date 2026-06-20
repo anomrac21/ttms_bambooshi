@@ -1,5 +1,5 @@
 {
-    "background_color": "#000000",
+    "background_color": "#1e3a5f",
     "description": "Bambooshi Digital Menu",
     "display": "standalone",
     "icons": [
@@ -68,5 +68,5 @@
     ],
     "short_name": "Bambooshi",
     "start_url": ".",
-    "theme_color": "#000000"
+    "theme_color": "#1e3a5f"
 }

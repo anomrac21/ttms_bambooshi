@@ -12,7 +12,7 @@ jobs:
       - name: Trigger cluster Hugo rebuild
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.HUGO_DEPLOY_TOKEN }}
+          token: ${{ secrets.HUGO_DEPLOY_TOKEN || secrets.CLUSTER_REPO_TOKEN }}
           repository: anomrac21/ttms-client-configs
           event-type: hugo-redeploy
           client-payload: |-

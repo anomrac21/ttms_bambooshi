@@ -1,0 +1,27 @@
+[
+  {
+    "Type": "update_locations",
+    "ItemID": "locations",
+    "Category": "",
+    "Data": {
+      "locations": [
+        {
+          "address": "Next to Central Warehousing Complex, 1 Baboonia Trace, Warner Village, Charlieville Off, Munroe Road, Flyover",
+          "city": "Chaguanas",
+          "island": "Trinidad",
+          "phone": "18687351000",
+          "whatsapp": "18687351000",
+          "latlon": [
+            10.567409,
+            -61.417663
+          ],
+          "subcategories": [],
+          "orderingtables": [],
+          "opening_hours": {
+            "mode": "Auto"
+          }
+        }
+      ]
+    }
+  }
+]
